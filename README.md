@@ -2,7 +2,7 @@
 
 - Não esquecer de configurar o arquivo "ZabbixApiConf.php" para realizar a conexão via API.
 
-Exemplo da página index.php:
+### Exemplo da página index.php:
 
 Link1
 - Interrupções da conectividade: 2
