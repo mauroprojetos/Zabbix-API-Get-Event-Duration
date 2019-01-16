@@ -124,7 +124,7 @@
 ?>
 		
     <h3>Internet</h3>      	
-    <p>link1</p>
+    <p>Link1</p>
     <ul>
         <li>Interrupções da conectividade: <?=$link1Count?></li>
         <li>Tempo sem conexão: <?=$link1Duration?></li>
