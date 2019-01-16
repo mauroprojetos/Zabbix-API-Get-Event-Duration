@@ -1,0 +1,1 @@
+# Zabbix-API-Get-Event-Duration
