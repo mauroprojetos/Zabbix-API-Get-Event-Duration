@@ -7,27 +7,27 @@
 
 <?php
 
-	#==============================================================================
-	# Set the default timezone
-	#============================================================================== 
+    #==============================================================================
+    # Set the default timezone
+    #============================================================================== 
     date_default_timezone_set('America/Sao_Paulo');
 
-	#==============================================================================
-	# PHP Zabbix API
-	#==============================================================================
+    #==============================================================================
+    # PHP Zabbix API
+    #==============================================================================
     require_once("ZabbixApi.php");
     require_once("ZabbixApiConf.php");
 
-	#==============================================================================
-	# Periodo em Unix Timestamp
-	# Conversor: https://www.unixtimestamp.com/index.php
-	#==============================================================================
+    #==============================================================================
+    # Periodo em Unix Timestamp
+    # Conversor: https://www.unixtimestamp.com/index.php
+    #==============================================================================
     $date_from = "1515715200"; // 01/01/2018
     $date_till = "1546300800"; // 01/01/2019
 
     #==============================================================================
-	# Consulta eventos de uma trigger
-	#==============================================================================
+    # Consulta eventos de uma trigger
+    #==============================================================================
     function getEvent($api, $triggerId, $val, $countOut) {
     	
     	$method = 'event.get';
@@ -46,8 +46,8 @@
     }
 
     #==============================================================================
-	# Procura o evento de recuperação e retorna a data
-	#==============================================================================
+    # Procura o evento de recuperação e retorna a data
+    #==============================================================================
     function findEvent($array, $eventSearch){
         foreach ($array as $key => $value) {
             if ($value["eventid"] == $eventSearch) {
@@ -57,8 +57,8 @@
     };
 
     #==============================================================================
-	# Calcula a diferença de tempo entre incidente e a recuperação
-	#==============================================================================
+    # Calcula a diferença de tempo entre incidente e a recuperação
+    #==============================================================================
     function eventDuration($arrayProblem,$arrayRecovery){
         $total = array();
     	foreach ($arrayProblem as $key => $value) {
@@ -94,10 +94,10 @@
 
     	$api->login($zbx_user, $zbx_pass);
 
-	    #==============================================================================
-		# Function getEvent(conexão,triggerid,1-incidente | 2-recuperacao, Contador)
-		# Function eventDuration($array incidente, $array recuperação)
-		#==============================================================================       
+	#==============================================================================
+	# Function getEvent(conexão,triggerid,1-incidente | 2-recuperacao, Contador)
+	# Function eventDuration($array incidente, $array recuperação)
+	#==============================================================================       
     	$link1Problem = getEvent($api, "34649", 1, false); 
     	$link1Recovery = getEvent($api, "34649", 0, false); 
         $link1Count = getEvent($api, "34649", 1, true);
