@@ -1,6 +1,6 @@
 # Zabbix-API-Get-Event-Duration
 
-- Adicionar os dados de autenticação no arquivo "ZabbixApiConf.php" para realizar a consulta via API.
+- Adicionar dados de autenticação no arquivo "ZabbixApiConf.php" para realizar a consulta via API.
 
 ### Resultado:
 
