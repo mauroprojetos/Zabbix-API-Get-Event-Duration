@@ -1,6 +1,6 @@
 # Zabbix-API-Get-Event-Duration
 
-- Não esquecer de configurar o arquivo "ZabbixApiConf.php" para realizar a conexão via API.
+- Configurar o arquivo "ZabbixApiConf.php" para realizar a consulta via API.
 
 ### Resultado:
 
